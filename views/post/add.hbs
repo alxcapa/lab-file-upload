@@ -1,0 +1,25 @@
+<div id="form">
+  <h2>Add a post</h2>
+  <form action="/create-post" method="POST" enctype="multipart/form-data">
+
+
+    <label>Image:
+      <input type="file" name="picPath" class="form-control-file" />
+    </label>
+
+    <label>
+      Content:
+      <textarea type="text" name="content"></textarea>
+    </label>
+
+    <label>
+      <input type="text" name="picName">
+    </label>
+
+    <button type="submit">Submit</button>
+
+    {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>
